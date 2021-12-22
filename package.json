@@ -1,0 +1,11 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "an app to try out electron",
+  "main": "index.js",
+  "author": "YFLooi",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.5"
+  }
+}
