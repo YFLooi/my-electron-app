@@ -5,14 +5,20 @@
   "main": "main.js",
   "author": "YFLooi",
   "license": "MIT",
-  "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "devDependencies": {
-    "electron": "^16.0.5"
+    "electron": "16.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.1.3"
+  },
+  "build": {
+    "appId": "my-electron-app",
+    "electronDownload": {
+      "cache": "./.electron-cache"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

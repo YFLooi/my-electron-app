@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript"></script>
 
     <!-- Bootstrap imports -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -12,11 +13,42 @@
       crossorigin="anonymous"
     />
 
+    <script src="./script.js"></script>
     <title>My Electron App</title>
   </head>
 
   <body>
-    <h1 class="border">Hello World!</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <div class="container">
+      <h1>A test electron app</h1>
+    </div>
+    <div class="container my-2">
+      <div class="row">
+        <div class="col-md-6 px-2 py-2">
+          <ul id="taskList" class="list-group">
+            <li class="list-group-item">Buy Groceries</li>
+            <li class="list-group-item">Cook Meal</li>
+          </ul>
+        </div>
+        <div class="col-md-6 px-2 py-2">
+          <input
+            class="form-control mb-2"
+            id="newTaskInput"
+            placeholder="Enter new task"
+          />
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="newTaskSubmit"
+            onclick="submitNewTask()"
+          >
+            Add task
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container my-2">
+      <div id="textDisplay" class="" style="min-height: 30px"></div>
+      <button onclick="triggerTextDisplay()">Trigger something</button>
+    </div>
   </body>
 </html>
